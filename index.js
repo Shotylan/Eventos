@@ -20,7 +20,7 @@ const pool = new pg.Pool({
 
 app.get('/lista', async(req, res) => {
     try {
-        const getParticipantsQuery = 'SELECT * FROM asistencias_dias';
+        const getParticipantsQuery = 'SELECT * FROM Prueba';
         const participants = await pool.query(getParticipantsQuery);
 
         return res.status(200).json(participants.rows);
