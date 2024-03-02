@@ -18,7 +18,7 @@ const pool = new pg.Pool({
     ssl: true
 })
 
-app.get('/listaParticipantes', async(req, res) => {
+app.get('/lista', async(req, res) => {
     try {
         const getParticipantsQuery = 'SELECT * FROM asistencias_dias';
         const participants = await pool.query(getParticipantsQuery);
